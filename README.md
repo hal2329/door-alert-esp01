@@ -17,6 +17,16 @@ A lightweight, ultra-low-power IoT door security system built with an ESP-01S (E
 - **Power Supply:** Powered directly by a 3.7V Li-ion battery. 
   > *Note: While the ESP8266 nominal voltage is 3.3V, this project connects the battery directly to the VCC pin. This allows `ESP.getVcc()` to accurately read the remaining battery charge as it drains, eliminating the need for an external analog voltage divider circuit.*
 
+## Libraries Required
+
+To compile this project, you need to install the following libraries through the **Arduino Library Manager** (Sketch > Include Library > Manage Libraries):
+
+- **UniversalTelegramBot** (by Jacinto Silva) – For sending messages to Telegram.
+- **ArduinoJson** (by Benoit Blanchon) – Required dependency for the Telegram Bot library (Recommended: version 6.x).
+- **Blynk** (by Volodymyr Shymanskyy) – For connecting and sending data to the Blynk IoT platform.
+
+*Note: The `ESP8266WiFi.h`, `WiFiClientSecure.h`, and `EEPROM.h` libraries are standard and included automatically when you install the ESP8266 board package in the Arduino IDE.*
+
 ## Configuration
 
 Before flashing the code to your ESP-01S, make sure to update the placeholder credentials with your own:
